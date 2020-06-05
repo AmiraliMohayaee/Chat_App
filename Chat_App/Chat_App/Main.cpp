@@ -72,12 +72,12 @@ int main(int argc, char* argv[])
 
 	if (listenSocket == nullptr)
 	{
-		std::cout << "Could not crete a server's listerner socket.\n" << std::endl;
+		std::cout << "Could not crete a server's listerner socket." << std::endl;
 		system("pause");
 		return 0;
 	}
 
-	std::cout << "Server socket ready for connection...\n" << std::endl;
+	std::cout << "Server socket ready for connection..." << std::endl;
 	std::cout << "Awaiting connection..." << std::endl;
 
 
@@ -86,7 +86,7 @@ int main(int argc, char* argv[])
 	// every half of second
 	while (!clientSocket)
 	{
-		SDLNet_TCP_Accept(listenSocket);
+		clientSocket = SDLNet_TCP_Accept(listenSocket);
 		std::cout << ".";
 		SDL_Delay(500);
 	}
@@ -101,7 +101,7 @@ int main(int argc, char* argv[])
 
 	if (SDLNet_TCP_Send(clientSocket, message.c_str(), length) < length)
 	{
-		std::cout << "Message could not be sent. Possble loss of data.\n" << std::endl;
+		std::cout << "Message could not be sent. Possble loss of data." << std::endl;
 	}
 	else
 	{
