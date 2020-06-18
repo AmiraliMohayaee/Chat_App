@@ -1,8 +1,7 @@
 #include <iostream>
 #include <string>
-#include "TCPConnection.h"
-#include "ScreenManager.h"
 #include "ChatServer.h"
+#include "Utility.h"#
 
 
 /////////////////////////////////////
@@ -11,17 +10,17 @@
 
 int main(int argc, char* argv[])
 {
-	Screen->ConsoleResize(800, 800);
+	Utility::ResizeWindow(800, 800);
 
 	ChatServer chat;
 
-	std::string character;
+	std::cout << "+=============================+" << std::endl;
+	std::cout << R"(   Beginning Chat App Server)" << std::endl;
+	std::cout << "+=============================+" << std::endl;
 
 	chat.Startup(1234, nullptr);
-	chat.Update();
-	chat.Shotdown();
+	chat.Chat();
+	chat.Shutdown();
 
-	Screen->OnWait();
-	
 	return 0;
 }

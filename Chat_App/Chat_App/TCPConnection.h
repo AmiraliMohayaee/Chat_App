@@ -2,8 +2,6 @@
 #define TCP_CONNECTION_H
 
 
-#include <string>
-#include <vector>
 #include <SDL.h>
 #include <SDL_net.h>
 
@@ -21,27 +19,5 @@ protected:
 };
 
 
-class TCPServer : public TCPConnection
-{
-public:
-	TCPServer();
-	bool Init(Uint16 port, const char* IPAddress = nullptr);
-	bool OpenSocket();
-	void ListenSocket();
-
-	bool Send(const std::string& msg);
-	bool Recv(std::string& msg);
-
-	void CloseSocket();
-
-	void PushClient();
-	void PopClient();
-
-
-private:
-	TCPsocket m_client;
-
-	std::vector<TCPsocket> m_clientSockets;
-};
 
 #endif

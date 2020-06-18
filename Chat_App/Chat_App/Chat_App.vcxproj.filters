@@ -31,6 +31,12 @@
     <Filter Include="Source Files\Screen">
       <UniqueIdentifier>{17d6c9fc-cdd4-472a-9ff1-462ecbe79cdf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Data">
+      <UniqueIdentifier>{3cd301b6-de85-4a7e-8fff-a4ca676c7876}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data">
+      <UniqueIdentifier>{29cfd892-4a95-4e20-aa8d-f6f0c986d1c2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -39,25 +45,28 @@
     <ClCompile Include="TCPConnection.cpp">
       <Filter>Source Files\Networking</Filter>
     </ClCompile>
-    <ClCompile Include="ScreenManager.cpp">
-      <Filter>Source Files\Screen</Filter>
-    </ClCompile>
     <ClCompile Include="ChatServer.cpp">
       <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="TCPServer.cpp">
+      <Filter>Source Files\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>Source Files\Data</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TCPConnection.h">
       <Filter>Header Files\Networking</Filter>
     </ClInclude>
-    <ClInclude Include="Singleton.h">
-      <Filter>Header Files\Patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="ScreenManager.h">
-      <Filter>Header Files\Screen</Filter>
-    </ClInclude>
     <ClInclude Include="ChatServer.h">
       <Filter>Header Files\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="TCPServer.h">
+      <Filter>Header Files\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.h">
+      <Filter>Header Files\Data</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
